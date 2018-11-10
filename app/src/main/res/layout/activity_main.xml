@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp"
+tools:context="com.codinginflow.jsonparsingexample.MainActivity">
+
+    <Button
+        android:id="@+id/button_parse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="parse" />
+
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/text_view_localTime"
+        android:layout_toEndOf="@+id/textViewLocalTime"
+        android:src="@mipmap/ic_launcher" />
+
+<TextView
+    android:id="@+id/text_view_localTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewLocalTime"
+    android:layout_centerHorizontal="true"
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/text_view_regionName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text_view_localTime"
+    android:layout_toEndOf="@+id/textViewRegion"
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/textViewLocalTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:text="Local Tme"
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/textViewRegion"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text_view_localTime"
+    android:layout_alignParentStart="true"
+    android:text="Region: "
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/text_view_countryName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text_view_regionName"
+    android:layout_toEndOf="@+id/textViewCountry"
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/textViewCountry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewRegion"
+    android:layout_alignStart="@+id/textViewRegion"
+    android:text="Country: "
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/textViewTemp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewCountry"
+    android:layout_alignStart="@+id/textViewRegion"
+    android:text="Temp: "
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewLast_updated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRegion"
+        android:layout_below="@+id/textViewTemp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:text="Last upd: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/text_view_temp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewCountry"
+    android:layout_toEndOf="@+id/textViewTemp"
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/text_view_last_updated"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewTemp"
+    android:layout_toEndOf="@+id/textViewLast_updated"
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/textViewState"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewLast_updated"
+    android:layout_alignStart="@+id/textViewRegion"
+    android:text="State: "
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/textViewWind_kph"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewState"
+    android:layout_alignStart="@+id/textViewRegion"
+    android:text="Wind kph: "
+    android:textColor="@android:color/black"
+    android:textSize="20sp" />
+
+<TextView
+    android:id="@+id/text_view_state"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewLast_updated"
+    android:layout_toEndOf="@+id/textViewState"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"/>
+
+<TextView
+    android:id="@+id/text_view_wind_kph"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textViewState"
+    android:layout_toEndOf="@+id/textViewWind_kph"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textViewSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp"
+        android:text="Settings"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRegion"
+        android:layout_alignTop="@+id/textViewPeriud"
+        android:text="City"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewPeriud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextCity"
+        android:layout_alignEnd="@+id/editTextPeriud"
+        android:text="Periud"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_parse"
+        android:layout_alignStart="@+id/textViewRegion"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Omsk" />
+
+    <EditText
+        android:id="@+id/editTextPeriud"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_parse"
+        android:layout_alignStart="@+id/image_icon"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="3" />
+
+</RelativeLayout>
